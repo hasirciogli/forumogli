@@ -1,6 +1,9 @@
 <?php
 
+use App\Livewire\ForumsPage;
 use Illuminate\Support\Facades\Route;
+use App\Livewire\Counter;
+use App\Livewire\HomePage;
 
 /*
 |--------------------------------------------------------------------------
@@ -13,6 +16,7 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-Route::get('/', function () {
-    return view('welcome');
-});
+
+Route::get('/', HomePage::class);
+Route::get('/forums', ForumsPage::class);
+Route::get('/profile', ForumsPage::class);
